@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('pr_cvets', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            //не забыть foreign keys для отношений
+            $table->text('description');
             $table->timestamps();
         });
     }

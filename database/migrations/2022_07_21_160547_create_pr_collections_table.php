@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('pr_collections', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description');
+            //не забыть foreign keys для отношений
+            $table->float('price');
+            $table->json('specs');
             $table->timestamps();
         });
     }
